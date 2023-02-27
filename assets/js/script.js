@@ -8,9 +8,16 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  //
-  $(".saveBtn").on("click",function(){
-console.log($(this))
+
+
+  // adds an event listener to our save button when clicked
+  $(".saveBtn").on("click", function () {
+    // gets the attribute of each button's parent to tell which hour was clicked on save and what text input was added.
+    // set as variable to access save hour and user's task
+    let hourId = $(this).parent().attr("id");
+    let taskText = $(this).siblings("textarea").val()
+    console.log(hourId)
+    console.log(taskText)
   })
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -23,5 +30,5 @@ console.log($(this))
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-  $("#currentDay").text(dayjs().format('ddd, MMM D YYYY') );
+  $("#currentDay").text(dayjs().format('ddd, MMM D YYYY'));
 });
