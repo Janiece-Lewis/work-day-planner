@@ -26,10 +26,23 @@ $(function () {
   $(".time-block").each(function () {
     // gives current hour
     let currentHour = dayjs().hour()
+
   //  takes the id from which ever time block, splits 'hour' and 'number' into an array. Allows us to get the 'number' using the index
     let id = $(this).attr("id").split('-')[1]
     // if statemet to change color based on hour 
-
+    if( id < currentHour){
+      // past white block
+      $(this).css("background-color", "#d3d3d3");
+    }
+    if( id == currentHour){
+      // present red block
+      $(this).css("background-color", " #ff6961");
+    }
+    if( id > currentHour){
+      // future green block
+      $(this).css("background-color", " #77dd77");
+    }
+    
   })
   // -------------------------------------------------------------------
   // block by comparing the id to the current hour. HINTS: How can the id
