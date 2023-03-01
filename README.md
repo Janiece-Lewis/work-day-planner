@@ -49,7 +49,7 @@ THEN the saved events persist
 
 ## Preview
 ![preview image](./assets/images/work-day-scheduler.png)
-[Deployed Link]()
+[Deployed Link]('https://janiece-lewis.github.io/work-day-planner/')
 
 ## Contributing
 Pull requests are welcome. For major changes, please open and issue first to discuss what you would like to change.
